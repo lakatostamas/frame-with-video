@@ -1,0 +1,23 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Frame with video</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+	<body>
+		<video width="100%" height="100%" controls>
+			<source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+		</video>
+		<script>
+			window.addEventListener('message', (ev) => {
+				console.log(ev.data);
+				document.querySelector('video').play();
+			});
+		</script>
+	</body>
+
+</html>
