@@ -1,0 +1,23 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Frame with video</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+	<body>
+		<iframe src="https://lakatostamas.github.io/frame-with-video/"></iframe>
+		<button id="FramePlayCall">Frame play call</button>
+		<script>
+			const iFrame = document.querySelector('iframe').contentWindow;
+			console.log(iFrame);
+			document.getElementById('FramePlayCall').addEventListener('click', () => {
+				iFrame.postMessage('play', 'https://lakatostamas.github.io');
+			});
+		</script>
+	</body>
+
+</html>
