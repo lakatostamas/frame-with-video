@@ -13,9 +13,15 @@
 			<source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
 		</video>
 		<script>
-			window.addEventListener('message', (ev) => {
-				console.log(ev.data);
-				document.querySelector('video').play();
+			window.addEventListener('message', ({ data }) => {
+				if (data !== 'play') {
+					return;
+				}
+
+				document.querySelector('video')
+					.play()
+					.then(console.log)
+					.catch(console.error);
 			});
 		</script>
 	</body>
