@@ -20,8 +20,8 @@
 
 				document.querySelector('video')
 					.play()
-					.then(console.log)
-					.catch(console.error);
+					.then(() => console.log('play'))
+					.catch((err) => console.log('play call failed', err));
 			});
 		</script>
 	</body>

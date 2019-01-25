@@ -13,8 +13,8 @@
 		<button id="FramePlayCall">Frame play call</button>
 		<script>
 			const iFrame = document.querySelector('iframe').contentWindow;
-			console.log(iFrame);
 			document.getElementById('FramePlayCall').addEventListener('click', () => {
+				console.log('play called');
 				iFrame.postMessage('play', 'https://lakatostamas.github.io');
 			});
 		</script>
